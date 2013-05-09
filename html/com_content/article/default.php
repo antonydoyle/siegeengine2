@@ -121,6 +121,11 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 				<?php endif; ?>
 			<?php endif; ?>
 		</ul>
+          <?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
+		<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+
+		<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
+	<?php endif; ?>
 	</footer>
 	<?php endif; ?>
 	<?php  if (!$params->get('show_intro')) : echo $this->item->event->afterDisplayTitle; endif; ?>
@@ -141,6 +146,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 				<?php endif; ?>
 		</figure>
 	<?php endif; ?>
+  
 	<?php
 	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
 		echo $this->item->pagination;
@@ -209,6 +215,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php if (isset($urls) AND ((!empty($urls->urls_position) AND ($urls->urls_position == '1')) OR ($params->get('urls_position') == '1'))): ?>
 	<?php echo $this->loadTemplate('links'); ?>
 	<?php endif; ?>
+    
 	<?php //optional teaser intro text for guests ?>
 	<?php elseif ($params->get('show_noauth') == true and  $user->get('guest') ) : ?>
 	<?php echo $this->item->introtext; ?>
