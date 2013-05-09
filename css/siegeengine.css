@@ -1,0 +1,200 @@
+/*Google fonts - this, to me is a nicer default than Helvetica - plus it's a web font, so no worry about users without Helvetica - yes, we exist. */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic);
+
+/* Joomla specific CSS & basic style overrides to remove the dull Foundation4 defaults. */
+
+/* typography, colours etc */
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#2C3E50;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a, .breadcrumbs > *, .breadcrumbs > * a, .breadcrumbs > * span {
+color:#27AE60;	
+}
+a:hover,.breadcrumbs > * a:hover {
+color:#E67E22;	
+}
+.breadcrumbs > *:before {
+content: "/";
+color: #aaaaaa;
+margin: 0 0.75em;
+position: relative;
+top: -2px;
+}
+/*menu */
+
+.top-bar, .top-bar.expanded .title-area {
+	background: #34495e;	
+}
+.top-bar.expanded .title-area  {
+	border-bottom:1px solid #fff;	
+}
+.top-bar-section ul li > a{font-weight: lighter;}
+.top-bar a:hover {
+      color: #E67E22; 
+	  }
+	  
+.top-bar-section li a:not(.button), .top-bar-section ul {
+	background:#34495e;  
+}
+.top-bar-section ul li.active > a {
+background: #4e6d8d;
+}
+.top-bar-section li a:not(.button):hover{
+background: #4e6d8d;
+}
+/* Buttons */
+
+.button {
+  border: none;
+  background: #34495e;
+  color: white;
+  font-size: 16.5px;
+  font-weight:normal;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden; }
+.button:hover, .button:focus {
+background-color: #4e6d8d;
+color: white;
+-webkit-transition: 0.25s;
+-moz-transition: 0.25s;
+-o-transition: 0.25s;
+transition: 0.25s;
+-webkit-backface-visibility: hidden; }
+.button:active, .button.active {
+background-color: #2c3e50;
+color: rgba(255, 255, 255, 0.75);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none; }
+.button.disabled, .button[disabled] {
+background-color: #95a5a6;
+color: white; }
+.button.button-large {
+padding-bottom: 12px;
+padding-top: 13px; }
+.button.button-primary {
+background-color: #1abc9c; }
+.button.button-primary:hover, .button.button-primary:focus {
+  background-color: #2fe2bf; }
+.button.button-primary:active, .button.button-primary.active {
+  background-color: #16a085; }
+.button.success {
+background-color: #2ecc71; }
+.button.success:hover, .button.success:focus {
+  background-color: #55d98d; }
+.button.success:active, .button.success.active {
+  background-color: #27ad60; }
+.button.warning {
+background-color: #f1c40f; }
+.button.warning:hover, .button.warning:focus {
+  background-color: #f4d03f; }
+.button.warning:active, .button.warning.active {
+  background-color: #cea70c; }
+  .button.info {
+    background-color: #3498db; }
+    .button.info:hover, .button.info:focus {
+      background-color: #5dade2; }
+    .button.info:active, .button.info.active {
+      background-color: #2383c4; }
+  .button.alert {
+    background-color: #e74c3c; }
+    .button.alert:hover, .button.alert:focus {
+      background-color: #ec7063; }
+    .button.alert:active, .button.alert.active {
+      background-color: #dc2d1b; }
+	  
+	  
+/* Other Elements */
+.panel {
+border-style: none;
+border-width: 0px;
+border-color: transparent;
+margin-bottom: 1.25em;
+padding: 1.25em;
+background: #f2f2f2;
+}
+
+.panel.callout {
+border-style: none;
+border-width: 0px;
+border-color: transparent;
+margin-bottom: 1.25em;
+padding: 1.25em;
+background: #3498db;
+-webkit-box-shadow: none;
+box-shadow:none;
+}
+.panel.green {
+	background: #2ecc71;
+}
+
+.panel.yellow {
+	background: #f1c40f; 
+}  
+.panel.green p, .panel.yellow p {
+	color:#fff;	
+}
+	  
+	  
+	  
+	  
+	  
+/* com_content stuff */
+ul.inline li {
+	display:inline-block;
+	margin-right:3px;
+	padding-right:8px;
+	font-size:0.85em;
+	font-weight:lighter;
+	font-style:italic;
+	border-right: 1px solid #999;
+	line-height: 1;
+
+}
+ul.inline li:last-child {
+		border-right: none;
+
+}
+.actions {
+	float:right;	
+}
+ul.actions, ul.pager.pagenav {
+	list-style:none;
+	margin-left:0;	
+}
+ul.actions li {
+	display:inline;
+	margin-right:5px;
+}
+ul.actions li a{
+	display:inline-block;
+	zoom:1;
+	*display:inline;	
+	width:16px;
+	height:16px;
+	text-indent:-9999999px;
+}
+
+ul.actions li.print a {
+	background:url(../images/systemIcons/print.png) 0 0 no-repeat;
+}
+ul.actions li.email a {
+	background:url(../images/systemIcons/email.png) 0 0 no-repeat;
+}
+ul.actions li.edit a{
+	background:url(../images/systemIcons/edit.png) 0 0 no-repeat;
+}
