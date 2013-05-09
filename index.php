@@ -29,17 +29,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <?php endif; ?>
 </head>
 <body>
-      <!--
-<p>ColTotal: <?php echo $coltotal ?></p>
 
-<p>ColCount: <?php echo $colcount ?></p>
-<p>MainWidth: <?php echo $mainwidth ?></p>
-<p>LeftWidth: <?php echo $leftwidth ?></p>
-<p>LeftWidth class: <?php echo $leftWidth ?></p>
-
-<p>RightWidth: <?php echo $rightwidth ?></p>
-<p>RightWidth class: <?php echo $rightWidth ?></p>
--->
 	<?php if ($this->countModules( 'top' )) : ?>
         <section class="row">
 			<!--toprow-->
