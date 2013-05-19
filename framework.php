@@ -14,8 +14,8 @@ $defaultWidth    			= '1000';
 $setWidth    			= $this->params->get('setWidth');
 
 
-if ($this->countModules('right') == 0)  {$rightwidth == 0;} else {$rightwidth = (int) ($this->params->get('rightwidth'));}
-if ($this->countModules('left') == 0)  {$leftwidth == 0;} else {$leftwidth = (int) ($this->params->get('leftwidth'));}
+if ($this->countModules('right') == 0)  {$rightwidth = 0;} else {$rightwidth = (int) ($this->params->get('rightwidth'));}
+if ($this->countModules('left') == 0)  {$leftwidth = 0;} else {$leftwidth = (int) ($this->params->get('leftwidth'));}
 
 $colcount = $rightwidth + $leftwidth;
 $coltotal = 12 - $colcount;

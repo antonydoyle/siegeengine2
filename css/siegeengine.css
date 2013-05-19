@@ -26,6 +26,13 @@ margin: 0 0.75em;
 position: relative;
 top: -2px;
 }
+
+ul, ol {
+	margin-left: 5px;
+}
+.top-bar ul {
+	margin-left:0;	
+}
 /*menu */
 
 .top-bar, .top-bar.expanded .title-area {
