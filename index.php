@@ -33,16 +33,14 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 	<?php if ($this->countModules( 'top' )) : ?>
         <section class="row">
 			<!--toprow-->
-			<div class="large-12 columns">
-                <jdoc:include type="modules" name="top" style="html5" />
-			</div>
+                <jdoc:include type="modules" name="top" style="siegeEngine" />
         </section>
 	<?php endif; ?>
 	
 	<?php if ($this->countModules( 'above' )) : ?>
         <section class="row">
             <!--aboverow-->
-            <jdoc:include type="modules" name="above" style="html5" />
+            <jdoc:include type="modules" name="above" style="siegeEngine" />
         </section>
     <?php endif; ?>
 	
@@ -51,7 +49,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
         <?php if ($this->countModules( 'left' )) : ?>
             <section class="<?php echo $leftWidth ?> columns sidebar">
                 <!--left-row-->
-                <jdoc:include type="modules" name="left" style="html5" />
+                <jdoc:include type="modules" name="left" style="siegeEngine" />
             </section>
         <?php endif; ?>
         <div class="<?php echo $mainwidth ?> columns">
@@ -59,7 +57,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
              <?php if ($this->countModules( 'above-content' )) : ?>
                 <div class="above-content">
                     <!--above-content-->
-                    <jdoc:include type="modules" name="above-content" style="html5" />
+                    <jdoc:include type="modules" name="above-content" style="siegeEngine" />
                 </div>
             <?php endif; ?>            
 			<?php if ($this->countModules( 'breadcrumbs' )) : ?>
@@ -71,14 +69,14 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             <?php if ($this->countModules( 'below-content' )) : ?>
                 <section class="below-content">
                     <!--below-content-->
-                    <jdoc:include type="modules" name="below-content" style="html5" />
+                    <jdoc:include type="modules" name="below-content" style="siegeEngine" />
                 </section>
             <?php endif; ?>
    		</div>
 		<?php if ($this->countModules( 'right' )) : ?>
             <section class="<?php echo $rightWidth ?> columns sidebar">
                 <!--right-row-->
-                <jdoc:include type="modules" name="right" style="html5" />
+                <jdoc:include type="modules" name="right" style="siegeEngine" />
             </section>
         <?php endif; ?>
     </div>
@@ -86,21 +84,21 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <?php if ($this->countModules( 'below' )) : ?>
         <section class="row">
             <!--belowrow-->
-                <jdoc:include type="modules" name="below" style="html5" />
+                <jdoc:include type="modules" name="below" style="siegeEngine" />
         </section>
     <?php endif; ?>
 
     <?php if ($this->countModules( 'bottom' )) : ?>
         <section class="row">
             <!--bottomrow-->
-            <jdoc:include type="modules" name="bottom" style="html5" />
+            <jdoc:include type="modules" name="bottom" style="siegeEngine" />
         </section>
     <?php endif; ?>
 	
     <?php if ($this->countModules( 'footer' )) : ?>
         <footer class="row">
             <!--footerrow-->
-            <jdoc:include type="modules" name="footer" style="html5" />
+            <jdoc:include type="modules" name="footer" style="siegeEngine" />
         </footer>
     <?php endif; ?>
 

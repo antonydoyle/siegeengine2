@@ -128,7 +128,7 @@ padding: 1.25em;
 background: #f2f2f2;
 }
 
-.panel.callout {
+.panel.callout, .panel.blue {
 border-style: none;
 border-width: 0px;
 border-color: transparent;
@@ -138,18 +138,24 @@ background: #3498db;
 -webkit-box-shadow: none;
 box-shadow:none;
 }
+.panel.callout a, .panel.blue a {
+	color:#f1c40f;
+}
 .panel.green {
 	background: #2ecc71;
 }
-
+.panel.green a {
+color:#3498db;
+}
+.panel.green a:hover, .panel.callout a:hover, .panel.blue a:hover {
+color:#E67E22;
+}
 .panel.yellow {
 	background: #f1c40f; 
 }  
 .panel.green p, .panel.yellow p {
 	color:#fff;	
 }
-	  
-	  
 	  
 	  
 	  
