@@ -12,7 +12,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+p {
+	margin-bottom: 0.5em;	
+}
 a, .breadcrumbs > *, .breadcrumbs > * a, .breadcrumbs > * span {
 color:#27AE60;	
 }
@@ -57,7 +59,7 @@ background: #4e6d8d;
 }
 /* Buttons */
 
-.button {
+button, .button {
   border: none;
   background: #34495e;
   color: white;
@@ -72,7 +74,11 @@ background: #4e6d8d;
   -moz-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden; 
+  }
+   .panel.green a.button, .panel.callout a.button, .panel.blue a.button, .panel.callout a.button,.panel.green a.button:hover, .panel.callout a.button:hover, .panel.blue a.button:hover {
+	color:white;   
+   }
 .button:hover, .button:focus {
 background-color: #4e6d8d;
 color: white;
@@ -163,7 +169,10 @@ color:#E67E22;
 .panel.green p, .panel.yellow p {
 	color:#fff;	
 }
-	  
+
+.sidebar {
+	padding:0;	
+}
 	  
 	  
 /* com_content stuff */
@@ -250,4 +259,21 @@ ul.pager.pagenav li {
 .tags > span  > a:hover {
      background-color: #16a085;
 }
+ /* Foundation overrides */
  
+ .row .row {
+width: auto;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+margin-bottom: 0;
+max-width: none;
+}
+.row > .row {
+width: auto;
+margin-left: -0.9375em;
+margin-right: -0.9375em;
+margin-top: 0;
+margin-bottom: 0;
+max-width: none;
+}

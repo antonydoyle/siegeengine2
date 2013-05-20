@@ -9,10 +9,11 @@ $loadMoo 				= $this->params->get('loadMoo');
 $setGeneratorTag		= $this->params->get('setGeneratorTag');
 $analytics 				= $this->params->get('analytics');
 $jQuery					= $this->params->get('jQuery');
+$jQueryOff				= $this->params->get('jQueryOff');
 $customCSS    			= $this->params->get('customCSS');
-$defaultWidth    			= '1000';
+$defaultWidth    		= '1000';
 $setWidth    			= $this->params->get('setWidth');
-
+$topbarTitle			= $this->params->get('topbarTitle');
 
 if ($this->countModules('right') == 0)  {$rightwidth = 0;} else {$rightwidth = (int) ($this->params->get('rightwidth'));}
 if ($this->countModules('left') == 0)  {$leftwidth = 0;} else {$leftwidth = (int) ($this->params->get('leftwidth'));}
@@ -59,16 +60,7 @@ if ($leftwidth == 10) { $leftWidth = 'large-10'; }
 if ($leftwidth == 11) { $leftWidth = 'large-11'; }
 if ($leftwidth == 12) { $leftWidth = 'large-12'; }
 
-$pageTitle = $this->getTitle();
-$option = JRequest::getCmd('option');
-$view = JRequest::getCmd('view');
-if ($option=="com_content" && $view=="article") {
-    $ids = explode(':',JRequest::getString('id'));
-    $article_id = $ids[0];
-    $article =& JTable::getInstance("content");
-    $article->load($article_id);
-    
-}
+
 
 // Modules
 $header = (int) ($this->countModules('header') > 0);

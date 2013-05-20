@@ -101,9 +101,18 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             <jdoc:include type="modules" name="footer" style="siegeEngine" />
         </footer>
     <?php endif; ?>
-
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/zepto.js"></script>
-
+    <?php if ($jQueryOff == 0) : ?>
+		<?php if ($jQuery == 1) : ?>
+            <script>
+              document.write('<script src=<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/' +
+              ('__proto__' in {} ? 'zepto' : 'jquery') +
+              '.js><\/script>')
+              </script>
+          <?php else : ?>
+          <script src=<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.js></script>
+          <?php endif; ?>
+  <?php endif; ?>
+  
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js"></script>
   <!--
   
@@ -136,9 +145,23 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js//foundation.topbar.js"></script>
   
   -->
+  <!-- Load respond.js for shit browsers -->
+  
+  <!--[if lte IE 8]>  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/respond.js"></script> <![endif]-->
   
   <script>
     $(document).foundation();
   </script>
+  <?php if ($analytics != "UA-XXXXX-X") : ?>
+<!-- http://mths.be/aab -->
+<script>
+var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+<?php endif; ?>
+<noscript>JavaScript is unavailable or disabled; so you are probably going to miss out on a few things. Everything should still work, but with a little less pzazz!</noscript>
+
 </body>
 </html>

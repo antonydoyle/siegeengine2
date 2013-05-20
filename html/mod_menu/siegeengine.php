@@ -6,18 +6,19 @@
  * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 defined('_JEXEC') or die;
-
 // Note. It is important to remove spaces between elements.
+
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
 <nav class="top-bar">
  <ul class="title-area">
     <!-- Title Area -->
-    <li class="name">
-      <h1><a href="#">Top Bar Title </a></h1>
+			    <li class="name">
+    
+      <h1><a href="#"><?php echo $notes; ?></a></h1>
     </li>
+
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
