@@ -52,20 +52,21 @@
 				</field>
 				<field name="jQueryOff" type="radio" default="0" label="TPL_SETTINGS_LOAD_JQUERYOFF_LABEL" description="TPL_SETTINGS_LOAD_JQUERYOFF_DESC">
 					<option value="1">TPL_SETTINGS_LOAD_JQUERYOFF_YES</option>
-					<option value="0">TPL_SETTINGS_LOAD_JQUERYOFF_NO</option>
+					<option value="0">TPL_SETTINGS_LOAD_JQUERY_NO</option>
 				</field>
 				<field type="spacer" default=" " />	
 				<field type="spacer" default=" " />
 					<field name="setWidth" type="text" default="1000" label="TPL_SETTINGS_SETWIDTH_LABEL" description="TPL_SETTINGS_SETWIDTH_DESC" size="15" />
 					<field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
 					<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
+					<field name="topbarTitle" type="text" default="SiegeEngine2" label="TPL_SETTINGS_TOPBAR_LABEL" description="TPL_SETTINGS_TOPBAR_DESC" size="15" />
 					<field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/siegeengine2/css/" filter="" exclude="foundation\.css|templateCore\.css|index\.html" stripext="" />
-					<field name="rightwidth" type="list" default="4" label="TPL_SETTINGS_RIGHTWIDTH" description="TPL_SETTINGS_RIGHTWIDTH_DESC" size="15">
+					<field name="rightwidth" type="list" default="4" label="TPL_SETTINGS_RIGHTWIDTH" description="TPL_SETTINGS_ANALYTICS_DESC" size="15">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
-						<option value="5">5</option>
+						<option value="5">6</option>
 						<option value="6">6</option>
 						<option value="7">7</option>
 						<option value="8">8</option>
@@ -74,12 +75,12 @@
 						<option value="11">11</option>
 						<option value="12">12</option>
 					</field>
-					<field name="leftwidth" type="list" default="4" label="TPL_SETTINGS_LEFTWIDTH" description="TPL_SETTINGS_LEFTWIDTH_DESC" size="15" >
+					<field name="leftwidth" type="list" default="4" label="TPL_SETTINGS_LEFTWIDTH" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" >
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
-						<option value="5">5</option>
+						<option value="5">6</option>
 						<option value="6">6</option>
 						<option value="7">7</option>
 						<option value="8">8</option>

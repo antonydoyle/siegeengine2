@@ -16,7 +16,7 @@ defined('_JEXEC') or die;
     <!-- Title Area -->
 			    <li class="name">
     
-      <h1><a href="#"><?php echo $notes; ?></a></h1>
+      <h1><a href="#"></a></h1>
     </li>
 
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->

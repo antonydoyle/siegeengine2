@@ -49,7 +49,7 @@ $info = $this->item->params->get('info_block_position', 0);
 		or ($params->get('show_hits'))); ?>
 	<?php if ($useDefList AND ($info == 0 OR $info == 2)) : ?>
 		<footer class="article-info">
-			<ul>
+			<ul class="inline">
 		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 			<li class="createdby">
 				<?php $author = $this->item->author; ?>
