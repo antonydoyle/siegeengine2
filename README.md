@@ -10,6 +10,6 @@
 <h5>Known issues</h5>
 <ul>
 <li>Top Bar Title field in template settings doesn't do anything - yet!</li>
-<li>"Sections" not yet implimented as a module - though it works when entered directly as HTML</li>
+<li>"Sections" module layouts work, but only one per page as they interfere with each other :/</li>
 </ul>
 <p>As always, we're continuing to work on this and with your feedback, hope to keep improving it!<?p>
