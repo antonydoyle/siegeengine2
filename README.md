@@ -15,3 +15,10 @@
 
 </ul>
 <p>As always, we're continuing to work on this and with your feedback, hope to keep improving it!<?p>
+
+<h5>Changelog</h5>
+<strong>04/06/13</strong>
+<ul>
+<li>Updated Foundation files to version 4.2.1</li>
+<li>Improvements to mod_login</li>
+</ul>
