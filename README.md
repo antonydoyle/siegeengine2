@@ -20,6 +20,7 @@
 <p>As always, we're continuing to work on this and with your feedback, hope to keep improving it!</p>
 
 <h5>Changelog</h5>
+<<<<<<< HEAD
 
 <strong>20/06/13</strong>
 <ul>
@@ -27,9 +28,14 @@
 <li>Foundation changelog here <a href="http://foundation.zurb.com/docs/changelog.html" alt="Foundation Changelog" title="Changelog">Foundation4 changelog</a></li>
 </ul>
 ---------------------
+=======
+>>>>>>> d160f2a4b6651df397d14818bd031f310f3ab1c8
 <strong>04/06/13</strong>
 <ul>
 <li>Updated Foundation files to version 4.2.1</li>
 <li>Improvements to mod_login</li>
 </ul>
+<<<<<<< HEAD
 ---------------------
+=======
+>>>>>>> d160f2a4b6651df397d14818bd031f310f3ab1c8
