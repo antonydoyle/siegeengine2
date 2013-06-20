@@ -9,8 +9,6 @@
 
 defined('_JEXEC') or die;
 
-JHtml::_('behavior.keepalive');
-JHtml::_('bootstrap.tooltip');
 ?>
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
 	<?php if ($params->get('pretext')) : ?>
@@ -61,27 +59,26 @@ JHtml::_('bootstrap.tooltip');
 		<?php endif; ?>
 		<div id="form-login-submit" class="control-group">
 			<div class="controls">
-				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary"><?php echo JText::_('JLOGIN') ?></button>
-			</div>
-		</div>
-		<?php
+				<button type="submit" tabindex="0" name="Submit" class="button radius"><?php echo JText::_('JLOGIN') ?></button>
+                 <?php
 			$usersConfig = JComponentHelper::getParams('com_users');
 			if ($usersConfig->get('allowUserRegistration')) : ?>
-			<ul class="unstyled">
-				<li>
-					<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
-					<?php echo JText::_('MOD_LOGIN_REGISTER'); ?> <span class="icon-arrow-right"></span></a>
-				</li>
-				<li>
-					<a href="<?php echo JRoute::_('index.php?option=com_users&view=remind'); ?>">
-					  <?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_USERNAME'); ?></a>
-				</li>
-				<li>
-					<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>"><?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a>
-				</li>
+                    <a href="#" data-dropdown="drop" class="radius button dropdown" style="float:right;">Problems?</a><br>
 
-			</ul>
+        <ul id="drop" data-dropdown-content class="f-dropdown">
+        
+  <li><a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
+					<?php echo JText::_('MOD_LOGIN_REGISTER'); ?> <span class="icon-arrow-right"></span></a></li>
+  <li><a href="<?php echo JRoute::_('index.php?option=com_users&view=remind'); ?>">
+					  <?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_USERNAME'); ?></a></li>
+  <li>					<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>"><?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a>
+</li>
+</ul>
 		<?php endif; ?>
+			</div>
+		</div>
+       
+		
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="<?php echo $return; ?>" />
