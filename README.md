@@ -13,7 +13,7 @@
 <h5>Known issues</h5>
 <ul>
 <li>Top Bar Title field in template settings doesn't do anything - yet!</li>
-<li>"Sections" module layouts work, but only one per page as they interfere with each other :/</li>
+<li><del>"Sections" module layouts work, but only one per page as they interfere with each other :/</del> NOW FIXED :D</li>
 <li>No off-canvas - yet</li>
 
 </ul>
