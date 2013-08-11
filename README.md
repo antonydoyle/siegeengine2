@@ -20,7 +20,14 @@
 <p>As always, we're continuing to work on this and with your feedback, hope to keep improving it!</p>
 
 <h5>Changelog</h5>
-
+<strong>11/08/13</strong>
+<p>Sorry it took so long folks!</p>
+<ul>
+<li>Updated Foundation files to version 4.3.1</li>
+<li>Foundation changelog here <a href="http://foundation.zurb.com/docs/changelog.html" alt="Foundation Changelog" title="Changelog">Foundation4 changelog</a></li>
+<li>Added Abide and Interchange JS libs. Plus demos on SiegeEngine.org</li>
+</ul>
+---------------------
 <strong>20/06/13</strong>
 <ul>
 <li>Updated Foundation files to version 4.2.2</li>

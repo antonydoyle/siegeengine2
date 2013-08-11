@@ -2,9 +2,9 @@
   'use strict';
 
   Foundation.libs.forms = {
-    name: 'forms',
+    name : 'forms',
 
-    version: '4.2.2',
+    version: '4.3.1',
 
     cache: {},
 
@@ -63,7 +63,7 @@
           self.toggle_radio($(this));
         })
         .on('change.fndtn.forms', 'form.custom select', function (e, force_refresh) {
-          if (!$(this).not('[data-customforms="disabled"])')) return;
+          if ($(this).is('[data-customforms="disabled"]')) return;
           self.refresh_custom_select($(this), force_refresh);
         })
         .on('click.fndtn.forms', 'form.custom label', function (e) {
@@ -150,7 +150,15 @@
 
             //store the old value in data
             $select.data('prevalue', $oldThis.html());
-            $select.trigger('change');
+            
+            // Kick off full DOM change event
+            if (typeof (document.createEvent) != 'undefined') {
+              var event = document.createEvent('HTMLEvents');
+              event.initEvent('change', true, true);
+              $select[0].dispatchEvent(event);
+            } else {
+              $select[0].fireEvent('onchange'); // for IE
+            }
           }
       });
 
