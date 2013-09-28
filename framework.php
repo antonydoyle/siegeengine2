@@ -13,7 +13,9 @@ $jQueryOff				= $this->params->get('jQueryOff');
 $customCSS    			= $this->params->get('customCSS');
 $defaultWidth    		= '1000';
 $setWidth    			= $this->params->get('setWidth');
+$widthUnit 				= $this->params->get('widthUnit');
 $topbarTitle			= $this->params->get('topbarTitle');
+$noConflict				= $this->params->get('noConflict');
 
 if ($this->countModules('right') == 0)  {$rightwidth = 0;} else {$rightwidth = (int) ($this->params->get('rightwidth'));}
 if ($this->countModules('left') == 0)  {$leftwidth = 0;} else {$leftwidth = (int) ($this->params->get('leftwidth'));}

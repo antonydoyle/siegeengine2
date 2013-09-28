@@ -23,7 +23,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       	<?php if ($setWidth != $defaultWidth) : ?>
         <style>
             .row {
-                max-width: <?php echo $setWidth ?>px;
+                max-width: <?php echo $setWidth ?><?php echo $widthUnit ?>;
             }
         </style>
     <?php endif; ?>
@@ -64,7 +64,8 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 				<div class="large-12">
 					<jdoc:include type="modules" name="breadcrumbs" style="none" />
 				</div>
-			<?php endif; ?>   
+			<?php endif; ?> 
+            	<jdoc:include type="message" />  
     			<jdoc:include type="component" />
             <?php if ($this->countModules( 'below-content' )) : ?>
                 <section class="below-content">
@@ -112,46 +113,24 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
           <script src=<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.js></script>
           <?php endif; ?>
   <?php endif; ?>
+
+  <?php if ($noConflict == 0) :?>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js"></script>
+    <script>
+    	$(document).foundation();
+  	</script>
   
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js"></script>
-  <!--
+  <?php else : ?>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.se.js"></script>
+  	<script>
+    	jQuery(document).foundation();
+  	</script>
+  <?php endif; ?>
   
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.dropdown.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.placeholder.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.forms.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.alerts.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.magellan.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.reveal.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.tooltips.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.clearing.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.cookie.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.joyride.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.orbit.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.section.js"></script>
-  
-  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js//foundation.topbar.js"></script>
-  
-  -->
-  <!-- Load respond.js for shit browsers -->
+    <!-- Load respond.js for shit browsers -->
   
   <!--[if lte IE 8]>  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/respond.js"></script> <![endif]-->
-  
-  <script>
-    $(document).foundation();
-  </script>
+
   <?php if ($analytics != "UA-XXXXX-X") : ?>
 <!-- http://mths.be/aab -->
 <script>

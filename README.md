@@ -13,13 +13,32 @@
 <h5>Known issues</h5>
 <ul>
 <li>Top Bar Title field in template settings doesn't do anything - yet!</li>
-<li><del>"Sections" module layouts work, but only one per page as they interfere with each other :/</del> NOW FIXED :D</li>
 <li>No off-canvas - yet</li>
 
 </ul>
 <p>As always, we're continuing to work on this and with your feedback, hope to keep improving it!</p>
+<hr/>
+<h5>Stuff in the works</h5>
+<p>I'm planning some of the following for future releases, but pelase don't email to ask when it will be ready. I'm struggling to find time to work on this at the moment! But, as always, please DO email if you have any issues, suggestions not on the list, or even to say thank you - I never get tired of those ones :)</p>
+<ul>
+<li>Off canvas layouts - They're coming; I just need to work out the best way to do it. Suggestions welcome ;)</li>
+<li>More configurable topbar menu; I've been wanting to add left and right menu support for a while now, and I think I may have cracked it. But it still needs some more work.</li>
+<li>More alternative layouts for core modules</li>
+<li>A proper Orbit module; Currently, Orbit works perfectly using the custom HTML module, but hey, who doesn't want a proper slideshow module?! :)</li>
+<li>More plugins and modules. Yeah; I've been promising this for a while, but it IS still on the agenda. I'm looking to add plugins and modules to make it easier to use the fun stuff included in the Foundation javascript :)</li>
+</ul>
+<hr/>
 
 <h5>Changelog</h5>
+<strong>28/09/13</strong>
+<p>Some updates based on feedback I've had from you lovely people!</p>
+<ul>
+<li>Added more flexible width setting; can now choose between px and % in the template settings.</li>
+<li>Option to switch jQuery (and therefore the Foundation JS) to use jQuery instead of $ so you can also use Mootools etc</li>
+<li>In relation to the above, I've also duplicated foundation.min.js as foundation.se.js; the latter has the fixes for using Mootools.</li>
+<li>Fixed an oversight where I'd managed to forget to add the system message to the template! Sorry!</li>
+</ul>
+---------------------
 <strong>11/08/13</strong>
 <p>Sorry it took so long folks!</p>
 <ul>
